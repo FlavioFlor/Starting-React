@@ -4,9 +4,12 @@ module.exports = {
         "es2020": true
     },
     "extends": [
-        "plugin:react/recommended",
         "prettier",
+        "prettier/standard",
+        "plugin:prettier/recommended",
+        "prettier/flowtype",
         "prettier/react",
+        "plugin:react/recommended",
         "airbnb"
     ],
     "parser": 'babel-eslint',
@@ -24,8 +27,14 @@ module.exports = {
     "rules": {
       "prettier/prettier": "error",
       "react/jsx-filename-extension": [
-        "warn",{extensions: [".js", ".js"]}
+        "warn",{extensions: [".jsx", ".js"]}
       ],
-      "import/prefer-default-export": "off"
+      "import/prefer-default-export": "off",
+      "react/state-in-constructor": "off",
+      "react/static-property-placement": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/prop-types": "off",
+      "no-param-reassign": "off",
+      "no-console": "off"
     }
 };
